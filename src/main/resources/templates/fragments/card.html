@@ -1,0 +1,35 @@
+<section xmlns="http://www.w3.org/1999/xhtml"
+         xmlns:th="http://www.thymeleaf.org">
+
+    <div th:fragment="cardImage" class="card">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+
+    <div th:fragment="cardLink(id, name, description, price)" class="card">
+        <img src="https://www.bridgetech.co.id/storage/2021/02/spring-logo.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title" th:text="${name}"></h5>
+            <h6 class="card-subtitle mb-2 badge bg-danger text-white" th:text="${price} + '$'"></h6>
+            <p class="card-text" th:text="${description}"></p>
+            <a th:href="@{/product/{id}(id = ${id}, name = ${name})}" class="card-link btn btn-success">View Detail</a>
+            <a href="#" class="card-link btn btn-danger">Buy</a>
+        </div>
+    </div>
+
+    <div th:fragment="cardFeature" class="card">
+        <div class="card-header">
+            Featured
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+
+</section>
