@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <th:block th:replace="~{/fragments/meta}"></th:block>
+
+    <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">Admin</title>
+
+    <th:block th:replace="~{/fragments/styles}"></th:block>
+</head>
+<body>
+
+<!-- Header fragment -->
+<div th:replace="~{/fragments/header}"></div>
+
+<!-- Child layout will render here -->
+<div layout:fragment="webChildLayout">
+
+</div>
+
+<!-- Footer fragment -->
+<div th:replace="~{/fragments/footer}"></div>
+
+<th:block th:replace="~{/fragments/scripts}"></th:block>
+
+</body>
+</html>
